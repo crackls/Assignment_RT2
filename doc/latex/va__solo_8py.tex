@@ -1,0 +1,67 @@
+\hypertarget{va__solo_8py}{}\doxysection{final\+\_\+assignment/scripts/va\+\_\+solo.py File Reference}
+\label{va__solo_8py}\index{final\_assignment/scripts/va\_solo.py@{final\_assignment/scripts/va\_solo.py}}
+
+
+Node to freely controll the robot \textbackslash{}autor Carlos Angel.  
+
+
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_free}{Free}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{va__solo_8py_a2bfaa8f47dcb0c93500e553e1fc4eeaa}{va\+\_\+solo.\+robot\+Call\+Back}} (request)
+\begin{DoxyCompactList}\small\item\em Callback for the service. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{va__solo_8py_a9968bdefcd8a4e6ff903f5e804cfdb74}{va\+\_\+solo.\+node}} ()
+\begin{DoxyCompactList}\small\item\em Main function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Node to freely controll the robot \textbackslash{}autor Carlos Angel. 
+
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+24/05/2022
+\end{DoxyDate}
+Service to\+: ~\newline
+ /goal /move\+\_\+base 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{va__solo_8py_a9968bdefcd8a4e6ff903f5e804cfdb74}\label{va__solo_8py_a9968bdefcd8a4e6ff903f5e804cfdb74}} 
+\index{va\_solo.py@{va\_solo.py}!node@{node}}
+\index{node@{node}!va\_solo.py@{va\_solo.py}}
+\doxysubsubsection{\texorpdfstring{node()}{node()}}
+{\footnotesize\ttfamily def va\+\_\+solo.\+node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Main function. 
+
+\begin{DoxyVerb}Main function to run the node
+\end{DoxyVerb}
+ \mbox{\Hypertarget{va__solo_8py_a2bfaa8f47dcb0c93500e553e1fc4eeaa}\label{va__solo_8py_a2bfaa8f47dcb0c93500e553e1fc4eeaa}} 
+\index{va\_solo.py@{va\_solo.py}!robotCallBack@{robotCallBack}}
+\index{robotCallBack@{robotCallBack}!va\_solo.py@{va\_solo.py}}
+\doxysubsubsection{\texorpdfstring{robotCallBack()}{robotCallBack()}}
+{\footnotesize\ttfamily def va\+\_\+solo.\+robot\+Call\+Back (\begin{DoxyParamCaption}\item[{}]{request }\end{DoxyParamCaption})}
+
+
+
+Callback for the service. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contains} & all the information regarding the sevice \begin{DoxyVerb}Callback for the service Goal. It will take the goal the user entered and then it will move the
+robot towards the objetive if possible
+
+Arg:   
+    request (Goal): Goal service information 
+\end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}

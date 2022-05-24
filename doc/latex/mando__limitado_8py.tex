@@ -1,0 +1,129 @@
+\hypertarget{mando__limitado_8py}{}\doxysection{final\+\_\+assignment/scripts/mando\+\_\+limitado.py File Reference}
+\label{mando__limitado_8py}\index{final\_assignment/scripts/mando\_limitado.py@{final\_assignment/scripts/mando\_limitado.py}}
+
+
+Node to controll the robot in assisted mode \textbackslash{}autor Carlos Angel.  
+
+
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_assisted}{Assisted}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{mando__limitado_8py_aacafb59bceb70dc645ccf2825ec2f932}{mando\+\_\+limitado.\+view}} (vision)
+\begin{DoxyCompactList}\small\item\em Function to get closest distances. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{mando__limitado_8py_ab19e0b2c594cff0487d4da14f0939321}{mando\+\_\+limitado.\+vel\+Call\+Back}} (msg)
+\begin{DoxyCompactList}\small\item\em Callback for the velocity. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{mando__limitado_8py_a3fb34fcf1f07d14db22d497b9f2ec791}{mando\+\_\+limitado.\+laser\+Scan\+Call\+Back}} (msg)
+\begin{DoxyCompactList}\small\item\em Callback for the laser scanner sensor. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{mando__limitado_8py_a96dec56c1250aad5934e81c44ec96d02}{mando\+\_\+limitado.\+node}} ()
+\begin{DoxyCompactList}\small\item\em Main function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{mando__limitado_8py_af5cb61eb7a0e742de173bf3d7bdfeede}\label{mando__limitado_8py_af5cb61eb7a0e742de173bf3d7bdfeede}} 
+float {\bfseries mando\+\_\+limitado.\+dist\+\_\+min} = 0.\+5
+\item 
+\mbox{\Hypertarget{mando__limitado_8py_ab5782bf3083565b31ec6fc7671d1be9c}\label{mando__limitado_8py_ab5782bf3083565b31ec6fc7671d1be9c}} 
+{\bfseries mando\+\_\+limitado.\+vel} = Twist(Vector3(0, 0, 0), Vector3(0, 0, 0))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Node to controll the robot in assisted mode \textbackslash{}autor Carlos Angel. 
+
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+24/05/2022
+\end{DoxyDate}
+Subscribes to\+: ~\newline
+ /cmd\+\_\+vel /scan
+
+Publishes to \+:~\newline
+ /cmd\+\_\+vel 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{mando__limitado_8py_a3fb34fcf1f07d14db22d497b9f2ec791}\label{mando__limitado_8py_a3fb34fcf1f07d14db22d497b9f2ec791}} 
+\index{mando\_limitado.py@{mando\_limitado.py}!laserScanCallBack@{laserScanCallBack}}
+\index{laserScanCallBack@{laserScanCallBack}!mando\_limitado.py@{mando\_limitado.py}}
+\doxysubsubsection{\texorpdfstring{laserScanCallBack()}{laserScanCallBack()}}
+{\footnotesize\ttfamily def mando\+\_\+limitado.\+laser\+Scan\+Call\+Back (\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})}
+
+
+
+Callback for the laser scanner sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contains} & all the information about Lase\+Scan topic \begin{DoxyVerb}Callback of the topic LaserScan. It sets the velocity of the robot to 0 whenever the robot is about to crash
+into some obstacles
+
+Arg:   
+    msg (LaserScan): has all the information about LaseScan topic\end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{mando__limitado_8py_a96dec56c1250aad5934e81c44ec96d02}\label{mando__limitado_8py_a96dec56c1250aad5934e81c44ec96d02}} 
+\index{mando\_limitado.py@{mando\_limitado.py}!node@{node}}
+\index{node@{node}!mando\_limitado.py@{mando\_limitado.py}}
+\doxysubsubsection{\texorpdfstring{node()}{node()}}
+{\footnotesize\ttfamily def mando\+\_\+limitado.\+node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Main function. 
+
+\begin{DoxyVerb}Main function to run the node\end{DoxyVerb}
+ \mbox{\Hypertarget{mando__limitado_8py_ab19e0b2c594cff0487d4da14f0939321}\label{mando__limitado_8py_ab19e0b2c594cff0487d4da14f0939321}} 
+\index{mando\_limitado.py@{mando\_limitado.py}!velCallBack@{velCallBack}}
+\index{velCallBack@{velCallBack}!mando\_limitado.py@{mando\_limitado.py}}
+\doxysubsubsection{\texorpdfstring{velCallBack()}{velCallBack()}}
+{\footnotesize\ttfamily def mando\+\_\+limitado.\+vel\+Call\+Back (\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})}
+
+
+
+Callback for the velocity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contains} & all the information regarding the topic cmd\+Vel \begin{DoxyVerb}Callback of the topic cmdVel. It will take the value published on cmVel and put it into the global variable 
+vel, so it can be modified based on the laserScan's ouputs
+
+Arg:
+    msg (Twist): contains all the information regarding the topic cmdVel\end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{mando__limitado_8py_aacafb59bceb70dc645ccf2825ec2f932}\label{mando__limitado_8py_aacafb59bceb70dc645ccf2825ec2f932}} 
+\index{mando\_limitado.py@{mando\_limitado.py}!view@{view}}
+\index{view@{view}!mando\_limitado.py@{mando\_limitado.py}}
+\doxysubsubsection{\texorpdfstring{view()}{view()}}
+{\footnotesize\ttfamily def mando\+\_\+limitado.\+view (\begin{DoxyParamCaption}\item[{}]{vision }\end{DoxyParamCaption})}
+
+
+
+Function to get closest distances. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em 720-\/aray} & vector data from laser scan sensor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+3-\/aray vector with the min distances (right, left and front) \begin{DoxyVerb}Function that divides the space in front of the robot into three parts (left, front and right part) and gives
+minimun distance to an obstacle for each of those parts
+
+Arg: 
+    vision (float): 721-aray vector that contains the distance from the robot to the obstacles in a range
+            0-180º of the front part of the robot  
+
+Returns:
+    dist (float): 3- aray vector that contains the minimun distance from the robot to the closer obstacle
+                for three regions of the space: left, frotn and right (respectively)\end{DoxyVerb}
+ 
+\end{DoxyReturn}
