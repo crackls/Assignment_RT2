@@ -1,6 +1,6 @@
 Research Track 2 Assignment
 ===========================
-Here in this repository you can find the code for the third and final assignment of the 
+Here in this repository you can find the code for the assignment of the 
 course Research Track 2, done by Carlos Ángel López de Rodas Serrano.
 
 This assignment is divided into three parts:
